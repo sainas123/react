@@ -1,4 +1,4 @@
-
+import ReactDOM from 'react-dom/client'
 import React from 'react'
 
 export function Saina(){
@@ -15,8 +15,8 @@ function Practice(){
         <div>
             <h3>practicing react</h3>
             <a
-                href="https://google.com" //a means anchor element. It creates a clickable link.
-                target="_blank" //open the link in a new tab
+                href="https://google.com" 
+                target="_blank" 
             >
             visit google
             </a>
@@ -55,6 +55,20 @@ export function Create(){
     )
 
 }
+
+
+export const reactelement=React.createElement(
+    'a',
+    {
+        href:'https://google.com',
+        target:'_blank'
+    },
+    'click me to visit google'
+)
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//     reactelement
+// )
 
 
 
