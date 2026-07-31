@@ -182,3 +182,35 @@
     border-right-color: var(--border);
   }
 }
+
+.count{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.add-btn{
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  
+}
+
+.remove-btn{
+  background-color: rgb(90, 23, 23);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+}
+
