@@ -20,6 +20,18 @@ function App() {
 
   }
 
+  function ispositive(){
+    if(counter>0){
+      return true;
+    }
+  }
+
+  function remove(){
+    if(ispositive()){
+      setCounter(counter-1);
+    }
+  }
+
 
   return (
     <>
@@ -29,7 +41,16 @@ function App() {
       <h1>welcome</h1>
       <h2>counter value:{counter}</h2>
       <button className="add-btn" onClick={()=>setCounter(counter+1)}>add {counter}</button>
-      <button className="remove-btn" onClick={()=>setCounter(counter-1)}>remove {counter}</button>
+      
+      <button className="remove-btn" onClick={()=>{
+          if (counter>0) {
+            setCounter(counter-1);
+          }
+        }
+      }> 
+      remove {counter}
+      </button>
+      
       </div>
       
      
