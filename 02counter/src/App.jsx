@@ -3,6 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import {Card} from './components/card.jsx'
+import {Username} from './components/card.jsx'  
+
+import { Movie, Liked } from './state.jsx'
+
 
 function App() {
 
@@ -51,7 +56,19 @@ function App() {
       remove {counter}
       </button>
       
+      <Card name="saina"/>
+      <Username username="@saina.x" second_username="@mikasa.y"/>
+      <Card name="mikasa"/>
+
+
+      <Movie title="avengers"/>
+     
+
+
+
+
       </div>
+
       
      
     </>
