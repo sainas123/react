@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {useEffect} from 'react'
 
 
 export function Movie({title}){
@@ -16,11 +17,41 @@ export function Movie({title}){
 export function Liked(){
     const [haslike,setLike]=useState(false);
 
+    const[likecount,setLikecount]=useState(0);
+
+    useEffect(()=>{
+
+        
+
+
+        
+    },[haslike])
+
     return (
-        <button onClick={()=>{setLike(!haslike)}}>
-           
-            {haslike ? "❤️" : "🤍"}
-        </button>
+        <>
+        
+            <button onClick={()=>{setLikecount(likecount+1)}}>
+                like movie
+                {likecount>0?"❤️":"🤍"}
+                
+            </button>
+            
+            <button onClick={()=>{setLikecount(Math.max(0,likecount-1))}}>
+                dislike movie:
+
+                
+                
+                {likecount>0?"❤️":"🤍"}
+
+            </button>
+
+            <div>
+                number of likes:{likecount}
+            </div>
+
+            <div> {likecount > 0 ? "❤️" : "🤍"} </div>
+        
+        </>
     )
 
 
